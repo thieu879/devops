@@ -1,4 +1,5 @@
-FROM gradle:8.5-jdk21 AS builder
+# Stage 1: Build với Gradle 8.14
+FROM gradle:8.14-jdk21 AS builder
 
 WORKDIR /app
 COPY build.gradle settings.gradle ./
@@ -8,6 +9,7 @@ RUN gradle dependencies --no-daemon || true
 COPY src ./src
 RUN gradle bootJar --no-daemon -x test
 
+# Stage 2: Runtime
 FROM eclipse-temurin:21-jre-alpine
 
 WORKDIR /app
