@@ -9,9 +9,8 @@ version = '0.0.1-SNAPSHOT'
 description = 'HN_KS23_NguyenGiaThieu_002'
 
 java {
-	toolchain {
-		languageVersion = JavaLanguageVersion.of(17)
-	}
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
 }
 
 configurations {
