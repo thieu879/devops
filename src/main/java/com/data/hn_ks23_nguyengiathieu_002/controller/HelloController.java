@@ -8,11 +8,6 @@ public class HelloController {
 
     @GetMapping("/api/hello")
     public String hello() {
-        return "Hello from Nguyen Gia Thieu - K23!";
-    }
-
-    @GetMapping("/api/status")
-    public String status() {
-        return "Backend is running OK!";
+        return "Hello world!";
     }
 }
