@@ -5,7 +5,7 @@ on:
     branches: [main, production]
 
 env:
-  IMAGE_NAME: thieu879/rikkei-backend
+  IMAGE_NAME: thieunguyen879/rikkei-backend
 
 jobs:
   build-and-push:
